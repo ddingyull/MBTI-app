@@ -135,13 +135,13 @@ const RESET = 'mbti/RESET';
 
 // 액션 생성 함수
 // payload -> 선택에 다른 결과 값 result 전달 필요
-function check (result) {
+const check = (result) => {
   return {
     type: CHECK,
     payload: { result },
     };
-  }
-function next () {
+  } 
+const next = () => {
     return {
       type: NEXT,
     };
@@ -151,6 +151,8 @@ function reset () {
       type: RESET,
     };
   }
+  
+  export { check, next }
   
 // 리듀서
 export default function mbti(state = initState, action) {
