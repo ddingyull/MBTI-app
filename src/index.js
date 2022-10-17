@@ -1,4 +1,5 @@
-import ReactDOM from 'react-dom';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
 import rootReducer from './store';  //./store/index.js와 동일한 경로
@@ -9,7 +10,7 @@ const reduxDevTool =
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
 
 const store = configureStore({ reducer: rootReducer }, reduxDevTool);
-console.log(store.getState());
+// console.log(store.getState());
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 

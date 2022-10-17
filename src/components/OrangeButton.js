@@ -1,11 +1,11 @@
 import Button from './Button';
 
 
-const OrangeButton = ({text, clickEvnet}) => {
+const OrangeButton = ({text, clickEvent}) => {
   return (
     <Button
     text={text}
-    clickEvent={clickEvnet}
+    clickEvent={clickEvent}
     mainColor="#fae243" 
     subColor="#fa9f1a" 
     hoverColor="#faf000"

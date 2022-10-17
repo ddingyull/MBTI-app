@@ -3,17 +3,25 @@ import styled from 'styled-components';
 import GlobalStyle from './components/GlobalStyle'
 import { useSelector } from 'react-redux';
 import Mbti from './components/Mbti';
+import Show from './components/Show';
 
 
 function App() {
   const page = useSelector((state) => state.mbti.page);
+  const survey = useSelector((state) => state.mbti.survey);
 
   return (
     <>
     <GlobalStyle/>
-    <Main >
-      {page === 0 ? <Start /> : <Mbti />}
-    </Main>
+    <Main>
+        {page === 0 ? (
+          <Start />
+        ) : page !== survey.length + 1 ? (
+          <Mbti />
+        ) : (
+          <Show />
+        )}
+      </Main>
     </>
 
   );
